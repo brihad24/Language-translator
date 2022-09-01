@@ -1,0 +1,2 @@
+def speechConversion():
+    return True
