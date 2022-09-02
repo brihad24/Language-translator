@@ -13,7 +13,7 @@ root.config(bg = '#485063')
 
 def buttonClick():
     tkinter.messagebox.showinfo('Translator', 'Listening...           ')
-    speechConversion()
+    
 
 ListenButton = Button(root, text="Start listening?", fg='white', bg = '#56717d', font= ('Helvetica', 11), command= buttonClick)
 ListenButton.pack(pady = 30)
