@@ -12,7 +12,7 @@ root.geometry("600x400+10+20")
 root.config(bg = '#485063')
 
 def buttonClick():
-    tkinter.messagebox.showinfo('Translator', 'Listening...           ')
+    tkinter.messagebox.showinfo('Translator', 'Listening to audio...           ')
     print(speechConversion())
 
 ListenButton = Button(root, text="Start listening?", fg='white', bg = '#56717d', font= ('Helvetica', 11), command= buttonClick)
