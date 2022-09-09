@@ -19,7 +19,7 @@ def buttonClick():
     r = sr.Recognizer()
     global TextBoxText
     with sr.Microphone() as source:
-        # print("listening.....")
+        print("listening.....")
         r.pause_threshold = 0.5
         audio = r.listen(source)
         TextBoxText = "Listening to audio..."
@@ -28,13 +28,13 @@ def buttonClick():
     try:
         # print("Recognizing.....")
         query = r.recognize_google(audio, language='en-in')
-        print(f"user said {query}\n")
+        print(f"user said {query}\n") 
         TextBoxText = query
         TranslatedText.delete("1.0","end")
         TranslatedText.insert('end', TextBoxText)
 
     except Exception as e:
-        # print("say that again please.....")
+        print("say that again please.....")
         TranslatedText.delete("1.0","end")
         TextBoxText = "Could not catch that :(" + '\n' + "Press the button to speak again"
         TranslatedText.insert('end', TextBoxText)
